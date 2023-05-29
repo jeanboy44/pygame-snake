@@ -7,11 +7,19 @@ from pygame.math import Vector2
 
 class Fruit:
     def __init__(self):
-        self.x = random.randint(0, cell_number - 1)  # nosec: B311
-        self.y = random.randint(0, cell_number - 1)  # nosec: B311
-        self.pos = Vector2(self.x, self.y)
+        """Fruit object
+
+        Attributes:
+            x (int): x position of the object within the grid
+            y (int): y position of the object  within the grid
+            pos (Vector2): x, y position of the object within the grid
+        """
+        self.x: int = random.randint(0, cell_number - 1)  # nosec: B311
+        self.y: int = random.randint(0, cell_number - 1)  # nosec: B311
+        self.pos: Vector2 = Vector2(self.x, self.y)
 
     def draw_fruit(self):
+        """draws the fruit to the screen"""
         fruit_rect = pygame.Rect(
             self.pos.x * cell_size, self.pos.y * cell_size, cell_size, cell_size
         )
