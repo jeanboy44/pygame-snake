@@ -1,0 +1,7 @@
+black
+flake8
+mypy
+isort
+bandit
+pre-commit
+pygame==2.4.0

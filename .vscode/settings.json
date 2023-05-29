@@ -1,0 +1,26 @@
+{
+    "autoDocstring.docstringFormat": "google",
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "python.linting.banditEnabled": true,
+    "python.linting.banditArgs": [
+        "-r",
+        "--configfile=${workspaceFolder}/bandit.yml"
+    ],
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=88"
+    ],
+    "python.linting.mypyEnabled": true,
+    "python.testing.pytestEnabled": true,
+    "isort.args": [
+        "--profile=black"
+    ],
+    "isort.path": [
+        "isort"
+    ],
+    "editor.rulers": [
+        88
+    ]
+}
