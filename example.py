@@ -11,5 +11,6 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+    screen.fill((175, 215, 70))
     pygame.display.update()
     clock.tick(60)
