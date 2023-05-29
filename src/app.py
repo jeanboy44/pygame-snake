@@ -125,6 +125,9 @@ class Snake:
     def play_crunch_sound(self):
         self.crunch_sound.play()
 
+    def reset(self):
+        self.body = [Vector2(7, 10), Vector2(6, 10), Vector2(5, 10)]
+
 
 class Fruit:
     def __init__(self):
@@ -202,8 +205,7 @@ class Main:
 
     def game_over(self):
         """game over"""
-        pygame.quit()
-        sys.exit()
+        self.snake.reset()
 
     def draw_grass(self):
         """draw grass on the grid"""
