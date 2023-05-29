@@ -16,7 +16,7 @@ class Snake:
             new_block (bool): Whether to add a new block or not
         """
         self.body = [Vector2(7, 10), Vector2(6, 10), Vector2(5, 10)]
-        self.direction = Vector2(1, 0)
+        self.direction = Vector2(0, 0)
         self.new_block = False
 
         self.head_up = pygame.image.load("resources/head_up.png").convert_alpha()
@@ -127,6 +127,7 @@ class Snake:
 
     def reset(self):
         self.body = [Vector2(7, 10), Vector2(6, 10), Vector2(5, 10)]
+        self.direction = Vector2(0, 0)
 
 
 class Fruit:
