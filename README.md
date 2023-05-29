@@ -1,5 +1,7 @@
 # pygame-snake
-Snake game with pygame
+Snake game with pygame.
+This game is developed by following the instruction here.
+https://youtu.be/QFvqStqPCRU
 
 
 ## How to Setup
