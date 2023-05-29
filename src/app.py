@@ -40,6 +40,7 @@ class Snake:
         self.body_tl = pygame.image.load("resources/body_tl.png").convert_alpha()
         self.body_br = pygame.image.load("resources/body_br.png").convert_alpha()
         self.body_bl = pygame.image.load("resources/body_bl.png").convert_alpha()
+        self.crunch_sound = pygame.mixer.Sound("resources/crunch.wav")
 
     def draw_snake(self):
         self.update_head_graphics()
@@ -121,6 +122,9 @@ class Snake:
     def add_block(self):
         self.new_block = True
 
+    def play_crunch_sound(self):
+        self.crunch_sound.play()
+
 
 class Fruit:
     def __init__(self):
@@ -178,6 +182,7 @@ class Main:
         if self.fruit.pos == self.snake.body[0]:
             self.fruit.randomize()
             self.snake.add_block()
+            self.snake.play_crunch_sound()
 
     def check_fail(self):
         """check if 1. the snake moves to out of the grid, 2. the snake colides with
@@ -237,6 +242,7 @@ class Main:
         pygame.draw.rect(screen, (56, 74, 12), bg_rect, 2)
 
 
+pygame.mixer.pre_init(44100, -16, 2, 152)
 pygame.init()
 cell_size = 40
 cell_number = 20
