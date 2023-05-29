@@ -19,3 +19,9 @@ python -m venv .venv
 ```
 (.venv) pre-commit install
 ```
+
+## How to Run the Game?
+run the conmmand below
+```
+(.venv) python src/app.py
+```
